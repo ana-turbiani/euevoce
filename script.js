@@ -63,7 +63,7 @@ audio.addEventListener('canplaythrough', function() {
 });
 
 
-//window.addEventListener("load", () => audio.play());
+
 
 
 
