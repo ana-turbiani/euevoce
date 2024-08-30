@@ -57,6 +57,13 @@ function showMessage() {
     document.getElementById("message").style.display = "block";
 }
 
+var audio = new Audio('audio.mp3');
+audio.addEventListener('canplaythrough', function() {
+  audio.play();
+});
+
+
+
 
 
 
