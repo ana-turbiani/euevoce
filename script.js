@@ -57,12 +57,13 @@ function showMessage() {
     document.getElementById("message").style.display = "block";
 }
 
-const audio = new Audio('Download.mp3');
-//audio.addEventListener('canplaythrough', function() {
-//  audio.play();
-//});
+var audio = new Audio('Download.mp3');
+audio.addEventListener('canplaythrough', function() {
+  audio.play();
+});
 
-window.addEventListener("load", () => audio.play());
+
+//window.addEventListener("load", () => audio.play());
 
 
 
