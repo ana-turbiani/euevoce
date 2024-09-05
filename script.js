@@ -1,7 +1,6 @@
 const hearthContainer = document.querySelector(".hearth-container");
 const time = 100;
 
-
 function randomHearths() {
         const element = document.createElement('i');
         const classes = ["fa-solid", "fa-heart", "hearth"];
@@ -64,4 +63,32 @@ audio.addEventListener('canplaythrough', function() {
 });
 
 
-/*window.addEventListener("load", () => audio.play()); /*audio */
+window.addEventListener("load", () => audio.play());
+
+const correctPassword = "18092023"; 
+let timerInterval;
+const startDate = new Date("2000-09-18T20:30:00");
+
+function authenticate() {
+  const passwordInput = document.getElementById("passwordInput").value;
+  if (passwordInput === correctPassword) {
+    const loginContainer = document.getElementById("login");
+    const timerDiv = document.getElementById("timer");
+
+    if (loginContainer && timerDiv) {
+      loginContainer.style.display = "none";
+      timerDiv.style.display = "block";
+      startTimer();
+      updateTimer();
+    }
+
+    document.querySelector('.login-container').remove();
+    document.querySelector('.content-container').classList.remove('hidden');
+  } else {
+    alert("Senha incorreta meu amor, tente novamente!!");
+  }
+}
+
+function dica() {
+  alert("A senha é o dia que nos conhecemos via internet...(dia, mês, ano) sem espaço, ex: 17102003")
+}
